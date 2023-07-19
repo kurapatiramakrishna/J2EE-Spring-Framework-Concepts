@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+   <!-- this is defalut constructor
+   it willo print defalt values empty values in console
+   <bean id="emp1" class="org.jsp1.configurationOfxml.employee" scope="prototype"> 
+   
+   </bean> -->
+   
+   <!-- Configuration of Employee Bean using constructor with 1 argument -->
+    <bean id="emp1" class="org.jsp1.configurationOfxml.employee">
+        <constructor-arg value="101" />
+    </bean>
+
+    <!-- Configuration of Employee Bean using constructor with 2 arguments -->
+    <bean id="emp2" class="org.jsp1.configurationOfxml.employee" scope="prototype">
+        <constructor-arg value="102" />
+        <constructor-arg value="John Doe" />
+    </bean>
+
+    <!-- Configuration of Employee Bean using constructor with 3 arguments -->
+    <bean id="emp3" class="org.jsp1.configurationOfxml.employee" scope="prototype">
+        <constructor-arg value="103" />
+        <constructor-arg value="Jane Doe" />
+        <constructor-arg value="80000" />
+    </bean>
+
+    <!-- Configuration of Employee Bean using constructor with 4 arguments -->
+    <bean id="emp4" class="org.jsp1.configurationOfxml.employee" scope="prototype">
+        <constructor-arg value="104" />
+        <constructor-arg value="Bob Smith" />
+        <constructor-arg value="70000" />
+        <constructor-arg value="bob@example.com" />
+    </bean>
+  <!-- Configuration of Employee Bean using constructor with 5 arguments -->
+    <bean id="emp5" class="org.jsp1.configurationOfxml.employee" scope="prototype">
+        <constructor-arg value="105" />
+        <constructor-arg value="Alice Johnson" />
+        <constructor-arg value="90000" />
+        <constructor-arg value="alice@example.com" />
+        <constructor-arg value="password123" />
+    </bean>
+
+    <!-- Configuration of Employee Bean using constructor with 6 arguments -->
+   <bean id="emp6" class="org.jsp1.configurationOfxml.employee" scope="prototype">
+    <constructor-arg value="106" />
+    <constructor-arg value="Michael Brown" />
+    <constructor-arg value="75000" />
+    <constructor-arg value="michael@example.com" />
+    <constructor-arg value="pass456" />
+    <constructor-arg value="987654321" /> <!-- Update the value to a valid integer -->
+</bean>
+    
+   <bean id="emp7" class="org.jsp1.configurationOfxml.employee" scope="prototype">
+    <constructor-arg value="107" />
+    <constructor-arg value="Emma Lee" />
+    <constructor-arg value="82000" />
+    <constructor-arg value="emma@example.com" />
+    <constructor-arg value="password789" />
+    <constructor-arg value="8765432109" />
+    <constructor-arg value="123" /> <!-- Update the value to a valid integer representing the department number -->
+</bean>
+
+</beans>

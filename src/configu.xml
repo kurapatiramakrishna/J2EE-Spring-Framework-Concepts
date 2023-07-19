@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+            
+            
+          
+         <!-- Configuration of the 'author' bean dependency -->
+    <bean id="author" class="org.jsp1.autowiring.author">
+        <constructor-arg value="ABCD" />
+        <constructor-arg value="174" />
+    </bean>
+    
+    <bean id="book1" class="org.jsp1.autowiring.Book" autowire="byType">
+        <constructor-arg value="webTech" />
+        <constructor-arg value="book-103" />
+        <constructor-arg value="42.0" />
+    </bean>
+        
+            </beans>
